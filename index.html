@@ -1,208 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
 
-		<link rel="stylesheet" href="estilo.css" />
-		<link
-			rel="stylesheet"
-			media="screen and (max-width:768px)"
-			href="estilo2.css"
-		/>
-		<title>Portofalio| Welcome</title>
-	</head>
-	<body>
-		<header id="mainheader">
-			<nav id="navbar">
-				<div class="container">
-								<ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
 
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#busca tu producto">Materias Cursadas</a></li>
-						<li><a href="#¿Necesitas ayuda?">Sobre mi</a></li>
-						<li><a href="#contact">Contacto</a></li>
-					</ul>
-				</div>
-			</nav>
-			
-        <section id="inicio" class="inicio">
-            <div class="contenido-banner">
-                <div class="contenedor-img">
-                    <img src="img/w.jpeg" alt="">
-                </div>
-                <h1>Ana Fuertes</h1>
-                <h2>Estudiante de Tecnlogia Información</h2>
-                <div class="redes">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-skype"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-solid fa-rss"></i></a>
-                </div>
-            </div>
-        </section>
-    
+<body>
+  <div id="calculadora">
+    <form name="form">
+      <input type="text" class="vsaida" id="visor" name="visor">
+    </form>
+    <table id="teclado">
+      <td>
+        <input type="button" class="limpar" id="buttonC" onclick="zerar(0)" value="C">
+        <input type="button" class="botaoAux" id="backspace" onclick="backspace()" value="⌫">
+        <input type="button" class="botaoAux" onclick="porcentagem()" value="%">
+        <input type="button" class="divisao" id="divisao" onclick="operacao('/')" value="÷">
+      </td>
+      <tr>
+        <td>
+          <input type="button" class='numero' onclick="preencher(7)" value="7">
+          <input type="button" class='numero' onclick="preencher(8)" value="8">
+          <input type="button" class='numero' onclick="preencher(9)" value="9">
+          <input type="button" class="multiplicacao" onclick="operacao('*')" value="x">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class='numero' onclick="preencher(4)" value="4">
+          <input type="button" class='numero' onclick="preencher(5)" value="5">
+          <input type="button" class='numero' onclick="preencher(6)" value="6">
+          <input type="button" class="subtracao" onclick="operacao('-')" value="-">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class='numero' onclick="preencher(1)" value="1">
+          <input type="button" class='numero' onclick="preencher(2)" value="2">
+          <input type="button" class='numero' onclick="preencher(3)" value="3">
+          <input type="button" class="soma" onclick="operacao('+')" value="+">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class="botaoAux" id="negativo" onclick="maisMenos()" value="+/-">
+          <input type="button" class='numero' onclick="preencher(0)" value="0">
+          <input type="button" class="botaoAux" id="ponto" onclick="ponto()" value=".">
+          <input type="button" class="igual" onclick='calcular()' value="=">
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script type="text/javascript" src="main.js"></script>
 
-
-
-		
-	
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p><span>Mi nombre es Ana fuertes soy de la ciudad de sto domingo dónde he crecido soy la última de 8 hermanos estudio en la universidad técnica de Manabí sigo la carrera de. Técnologia de la información y comunicación curso en 5 semestre y con positivismo llegar a conseguir el título.
-</span>
-            </p>
-            <div class="fila">
-                <!-- datos personales -->
-                <div class="col">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Cumpleaños</strong> 15-01-1999
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong> 0996478643
-                        </li>
-                        <li>
-                            <strong>Email</strong> afuertes@example.com
-                        </li>
-                                              <li>
-                            <strong>Dirección</strong> Sto Domingo
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!-- intereses -->
-                <div class="col">
-                    <h3>Mis ntereses</h3>
-                    <div class="contenedor-intereses">
-                     
-                        <div class="interes">
-                            <i class="fa-solid fa-headphones"></i>
-                            <span>MUSICA</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-plane"></i>
-                            <span>VIAJAR</span>
-                        </div>
-                       
-                        <div class="interes">
-                            <i class="fa-solid fa-person-hiking"></i>
-                            <span>DEPORTE</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-book"></i>
-                            <span>LIBROS</span>
-                        </div>
-                       
-                        <div class="interes">
-                            <i class="fa-solid fa-camera"></i>
-                            <span>FOTOS</span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-    </section>
-
-
-		</section>
-        <section id="curriculum" class="curriculum">
-            <div class="contenido-seccion">
-                <h2>Materias</h2>
-                <div class="fila">
-                    <div class="col izquierda">
-    
-                        <div class="item izq">
-                            <h4>Administracion de Base de Datos</h4>
-                            <div class="conectori">
-                                <div class="circuloi"></div>
-                            </div>
-                        </div>
-                        <div class="item izq">
-                            <h4>Sistemas Digitales</h4>
-                            <div class="conectori">
-                                <div class="circuloi"></div>
-                            </div>
-                        </div>
-                        <div class="item izq">
-                            <h4>Interaccion Humano-Computador</h4>
-                            <div class="conectori">
-                                <div class="circuloi"></div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col derecha">
-    
-                        <div class="item der">
-                            <h4>Ingles</h4>
-                            <div class="conectord">
-                                <div class="circulod"></div>
-                            </div>
-                        </div>
-                        <div class="item der">
-                            <h4>Desarrollo de Sistemas Informaticos</h4>
-                            <div class="conectord">
-                                <div class="circulod"></div>
-                            </div>
-                        </div>
-                        <div class="item der">
-                            <h4>Tecnologias de conmutacion y enrutamiento</h4>
-                            <div class="conectord">
-                                <div class="circulod"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-
-
-		<section id="contact">
-			<div class="container">
-				<h2>Contact Me</h2>
-				<div class="contact-row">
-					<div class="contact-row-img">
-						<img src="img/ca.jpg" alt="" />
-					</div>
-					<div class="contact-row-form">
-						<form action="">
-							<div class="form-group">
-								<label for="name">Name</label>
-								<input type="text" class="form-control" />
-							</div>
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="email" class="form-control" />
-							</div>
-							<div class="form-group">
-								<label for="message">Message</label>
-								<textarea
-									name="message"
-									id=""
-									cols="30"
-									rows="10"
-									class="form-control"
-								></textarea>
-							</div>
-							<button class="btn btn-dark">Send Message</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		
-	</body>
 </html>
